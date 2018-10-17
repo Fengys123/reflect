@@ -3,13 +3,23 @@ package com.dlut;
 
 public class Student extends Person implements GoodStudent
 {
-    String school;
+    private String school;
     int clazz;
     float score;
 
-    @Override
-    public void studyHard()
+    public String getSchool()
     {
-        System.out.println("正在刻苦学习!!!");
+        return school;
+    }
+
+    @Override
+    public void studyHard(String book)
+    {
+        System.out.println("正在刻苦学习" + book +"!!!");
+    }
+
+    public void studyHard(String book,String name)
+    {
+        System.out.println("正在刻苦学习" + book + name +"!!!");
     }
 }

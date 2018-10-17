@@ -2,7 +2,7 @@ package com.dlut;
 
 public class Person
 {
-    String name;
+    private String name;
     String idCard;
     int age;
     boolean sex;
