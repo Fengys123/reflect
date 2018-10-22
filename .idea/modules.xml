@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Reflect-demo.iml" filepath="$PROJECT_DIR$/Reflect-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fileTest/fileTest.iml" filepath="$PROJECT_DIR$/fileTest/fileTest.iml" />
     </modules>
   </component>
 </project>
