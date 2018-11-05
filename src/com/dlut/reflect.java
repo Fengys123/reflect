@@ -20,10 +20,13 @@ public class reflect
         //使用反射
         try
         {
-            //获取字节码对象
+            //获取字节码对象  直接获取内存中的class文件
             Class clazz = Class.forName("com.dlut.Student");
-            //new 了一个Student
+            //1.相当于new 了一个Student
             Student student = (Student) clazz.newInstance();
+
+
+
             clazz.getConstructor();
 
             Method method = clazz.getMethod("studyHard", String.class);
@@ -34,6 +37,7 @@ public class reflect
             method2.invoke(student,"C","123");
 
             Constructor c = clazz.getConstructor();
+            //2.利用反射获取的构造函数 进行对象的创建
             Student objStudent = (Student) c.newInstance();
             method.invoke(objStudent,"java");
 

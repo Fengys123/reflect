@@ -17,8 +17,12 @@ public class MyClassLoader extends ClassLoader
         if(baseDir != null)
         {
             File classFile = new File(baseDir,name.replaceAll("\\.","/") + ".class");
+            System.out.println("name" + name);
+            System.out.println("classFile" + classFile);
+            System.out.println("baseDir" + baseDir);
             if(classFile.exists())
             {
+                System.out.println("文件存在");
                 FileInputStream in = null;
                 ByteArrayOutputStream out;
                 try
@@ -31,7 +35,9 @@ public class MyClassLoader extends ClassLoader
                     {
                         out.write(buff,0,len);
                     }
-                    return defineClass(name,out.toByteArray(),0,out.size());
+
+                    //这里应该是全类名  包名+类名
+                    return defineClass("com.dlut.Tom",out.toByteArray(),0,out.size());
                 }
                 catch (Exception e)
                 {
